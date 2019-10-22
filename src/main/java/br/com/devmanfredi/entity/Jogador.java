@@ -1,4 +1,4 @@
-package br.com.devmanfredi;
+package br.com.devmanfredi.entity;
 
 import lombok.*;
 
@@ -12,6 +12,7 @@ import java.util.Optional;
 @Builder
 public class Jogador {
     private Long id;
+    private String nome;
     private Long idTime;
     private String nacionalidade;
     private String posicao;

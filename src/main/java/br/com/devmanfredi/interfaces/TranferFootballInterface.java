@@ -1,12 +1,13 @@
-package br.com.devmanfredi;
+package br.com.devmanfredi.interfaces;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
 public interface TranferFootballInterface {
 
-    void novoTime(Long id, String nome, LocalDateTime dataCriacao, BigDecimal dinheiroCaixa);
+    void novoTime(Long id, String nome, LocalDate dataCriacao, BigDecimal dinheiroCaixa);
 
     void comprarJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador);
 
@@ -16,7 +17,7 @@ public interface TranferFootballInterface {
 
     Long buscarTimeMaisRico();
 
-    List<String> buscarNomeTime(Long idTime);
+    String buscarNomeTime(Long idTime);
 
     Long buscarTimeMaisAntigo();
 

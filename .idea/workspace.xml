@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df7d53b-8383-4800-9428-d792f861e0aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/exceptions/IdentificadorUtilizadoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/exceptions/JogadorNaoEncontradoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/exceptions/SaldoInsuficienteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/exceptions/TimeNaoEncontradoException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/entity/Jogador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/entity/Time.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/interfaces/TranferFootballInterface.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +64,7 @@
   <component name="ProjectId" id="1SXEPH6AyLrXhqsu7qZwyQ45u5P" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
@@ -91,7 +91,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571701514348</updated>
-      <workItem from="1571701518051" duration="4523000" />
+      <workItem from="1571701518051" duration="8873000" />
     </task>
     <task id="LOCAL-00001" summary="Criada interface TranferFootball.">
       <created>1571704820379</created>
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571704820379</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adicionado exceptions">
+      <created>1571706136376</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1571706136376</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +126,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criada interface TranferFootball." />
-    <option name="LAST_COMMIT_MESSAGE" value="Criada interface TranferFootball." />
+    <MESSAGE value="Adicionado exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adicionado exceptions" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-package br.com.devmanfredi;
+package br.com.devmanfredi.entity;
 
 import lombok.*;
 

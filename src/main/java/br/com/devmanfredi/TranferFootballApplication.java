@@ -1,11 +1,17 @@
 package br.com.devmanfredi;
 
+import br.com.devmanfredi.entity.Jogador;
+import br.com.devmanfredi.entity.Time;
+import br.com.devmanfredi.exceptions.IdentificadorUtilizadoException;
+import br.com.devmanfredi.exceptions.JogadorNaoEncontradoException;
+import br.com.devmanfredi.exceptions.SaldoInsuficienteException;
+import br.com.devmanfredi.exceptions.TimeNaoEncontradoException;
+import br.com.devmanfredi.interfaces.TranferFootballInterface;
+
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.OptionalInt;
+import java.time.LocalDate;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class TranferFootballApplication implements TranferFootballInterface {
 
@@ -14,90 +20,173 @@ public class TranferFootballApplication implements TranferFootballInterface {
 
 
     @Override
-    public void novoTime(Long id, String nome, LocalDateTime dataCriacao, BigDecimal dinheiroCaixa) {
-        buscarTimePorId(id).isPresent(time -> {
-            throw new
+    public void novoTime(Long id, String nome, LocalDate dataCriacao, BigDecimal dinheiroCaixa) {
+        buscarTimePorId(id).ifPresent(time -> {
+            throw new IdentificadorUtilizadoException();
         });
+        times.add(Time.builder()
+             .id(id)
+             .nome(nome)
+             .dataCriacao(dataCriacao)
+             .dinheiroCaixa(dinheiroCaixa)
+             .build());
     }
 
     @Override
     public void comprarJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador) {
+        buscarTimePorId(idTime).ifPresent(time -> {
+            throw new IdentificadorUtilizadoException();
+        });
+        buscarJogadorPorId(id).ifPresent(jogador -> {
+            throw new IdentificadorUtilizadoException();
+        });
 
+        Time time = buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
+        Jogador jogador = buscarJogadorPorId(id).orElseThrow(JogadorNaoEncontradoException::new);
+
+        if(time.getDinheiroCaixa().compareTo(jogador.getPrecoJogador()) >= 0){
+            jogador.setIdTime(time.getId());
+        }else {
+            throw new SaldoInsuficienteException();
+        }
     }
 
     @Override
     public void venderJogador(Long idJogador) {
-
+        Jogador jogador = buscarJogadorPorId(idJogador).orElseThrow(JogadorNaoEncontradoException::new);
+        Time time = buscarTimePorId(jogador.getIdTime().get()).orElseThrow(TimeNaoEncontradoException::new);
+        time.setDinheiroCaixa(jogador.getPrecoJogador().add(jogador.getPrecoJogador()));
+        jogador.setIdTime(null);
     }
 
     @Override
     public List<Long> buscarTimes() {
-        return null;
+        return times.stream()
+                    .sorted(Comparator.comparing(Time::getId))
+                    .map(Time::getId)
+                    .collect(Collectors.toList());
     }
 
     @Override
     public Long buscarTimeMaisRico() {
-        return null;
+        return times.stream()
+                    .sorted(Comparator.comparing(Time::getId))
+                    .max(Comparator.comparing(Time::getDinheiroCaixa))
+                    .map(Time::getId)
+                    .orElseThrow(TimeNaoEncontradoException::new);
+
     }
 
     @Override
-    public List<String> buscarNomeTime(Long idTime) {
-        return null;
+    public String buscarNomeTime(Long idTime) {
+        buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
+        return times.stream()
+                    .filter(time -> time.getId().equals(idTime))
+                    .map(Time::getNome)
+                    .findFirst()
+                    .orElseThrow(TimeNaoEncontradoException::new);
     }
 
     @Override
     public Long buscarTimeMaisAntigo() {
-        return null;
+        return times.stream()
+                    .sorted(Comparator.comparing(Time::getId))
+                    .max(Comparator.comparing(Time::getDataCriacao))
+                    .map(Time::getId)
+                    .orElseThrow(TimeNaoEncontradoException::new);
     }
 
     @Override
     public Long buscarTimeMaisNovo() {
-        return null;
+        return times.stream()
+                    .sorted(Comparator.comparing(Time::getId))
+                    .min(Comparator.comparing(Time::getDataCriacao))
+                    .map(Time::getId)
+                    .orElseThrow(TimeNaoEncontradoException::new);
     }
 
     @Override
     public BigDecimal buscarSaldo(Long idTime) {
-        return null;
+        buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
+        return times.stream()
+                    .filter(time -> time.getId().equals(idTime))
+                    .map(Time::getDinheiroCaixa)
+                    .findFirst()
+                    .orElseThrow(TimeNaoEncontradoException::new);
     }
 
     @Override
     public List<Long> buscarJogadores(Long idTime) {
-        return null;
+        buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
+        return jogadores.stream()
+                        .filter(jogador -> jogador.getId().equals(idTime))
+                        .map(Jogador::getId)
+                        .collect(Collectors.toList());
     }
 
     @Override
     public Long buscarJogadorMaisCaro() {
-        return null;
+        return jogadores.stream()
+                        .sorted(Comparator.comparing(Jogador::getId))
+                        .max(Comparator.comparing(Jogador::getPrecoJogador))
+                        .map(Jogador::getId)
+                        .orElseThrow(JogadorNaoEncontradoException::new);
     }
 
     @Override
     public Long buscarJogadorMaisHabilidoso() {
-        return null;
+        return jogadores.stream()
+                        .sorted(Comparator.comparing(Jogador::getId))
+                        .max(Comparator.comparing(Jogador::getHabilidade))
+                        .map(Jogador::getId)
+                        .orElseThrow(JogadorNaoEncontradoException::new);
     }
 
     @Override
     public List<Long> buscarMelhoresJogadores() {
-        return null;
+        return jogadores.stream()
+                        .filter(jogador -> jogador.getHabilidade() >= 80)
+                        .map(Jogador::getId)
+                        .collect(Collectors.toList());
     }
 
     @Override
     public List<String> buscarJogadoresPorNacionalidade(String nacionalidade) {
-        return null;
+        return jogadores.stream()
+                        .filter(jogador -> jogador.getNacionalidade().equals(nacionalidade))
+                        .map(Jogador::getNome)
+                        .collect(Collectors.toList());
     }
 
     @Override
     public BigDecimal buscarValorDoTime(Long idTime) {
-        return null;
+        buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
+        return times.stream()
+                    .filter(time -> time.getId().equals(idTime))
+                    .map(Time::getDinheiroCaixa)
+                    .findFirst()
+                    .orElseThrow(TimeNaoEncontradoException::new);
     }
 
     @Override
     public void trocarPosicaoJogador(Long idJogador, String posicao) {
-
+        Jogador jogador = buscarJogadorPorId(idJogador).orElseThrow(JogadorNaoEncontradoException::new);
+        jogador.setPosicao(posicao);
     }
 
     @Override
     public String buscarPosicao(Long idJogador) {
-        return null;
+        return jogadores.stream()
+                        .filter(jogador -> jogador.getId().equals(idJogador))
+                        .map(Jogador::getPosicao)
+                        .findFirst()
+                        .orElseThrow(JogadorNaoEncontradoException::new);
+    }
+
+    private Optional<Jogador> buscarJogadorPorNacionalidade(String nacionalidade){
+        return jogadores.stream()
+                .filter(jogador -> jogador.getNacionalidade().equals(nacionalidade))
+                .findFirst();
     }
 
     private Optional<Jogador> buscarJogadorPorId(Long id){
@@ -110,12 +199,6 @@ public class TranferFootballApplication implements TranferFootballInterface {
         return times.stream()
                     .filter(time -> time.getId().equals(id))
                     .findFirst();
-    }
-
-    private Optional<Jogador> buscarJogadorPorNacionalidade(String nacionalidade){
-        return jogadores.stream()
-                        .filter(jogador -> jogador.getNacionalidade().equals(nacionalidade))
-                        .findFirst();
     }
 
 }
