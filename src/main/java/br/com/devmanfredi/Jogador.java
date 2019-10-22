@@ -17,7 +17,7 @@ public class Jogador {
     private String posicao;
     private Integer camisa;
     private Integer habilidade;
-    private BigDecimal preco;
+    private BigDecimal precoJogador;
 
     public Optional<Long> getIdTime(){
         return Optional.ofNullable(idTime);
