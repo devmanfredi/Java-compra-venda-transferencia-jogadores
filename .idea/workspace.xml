@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df7d53b-8383-4800-9428-d792f861e0aa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/Jogador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/entity/Jogador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/Time.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/entity/Time.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/interfaces/TranferFootballInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +71,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Codenation/Desafios Java 2019/teste-voces/src/test/java/com/challenge/invoice/InvoiceApplicationTests.java" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RunDashboard">
@@ -81,6 +89,74 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Gradle.TransferFootballApplicationTest.dadoUmTime_QuandoAdicionarNaLista_EntaoDeveRetornarSeuId">
+    <configuration name="TranferFootball [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TransferFootballApplicationTest.dadoUmTime_QuandoAdicionarNaLista_EntaoDeveRetornarSeuId" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;TransferFootballApplicationTest.dadoUmTime_QuandoAdicionarNaLista_EntaoDeveRetornarSeuId&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TransferFootballApplicationTest.dadoUmTime_QuandoForCompleto_EntaoSalvar" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;TransferFootballApplicationTest.dadoUmTime_QuandoForCompleto_EntaoSalvar&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TransferFootballApplicationTest.dadoUmTime_QuandoAdicionarNaLista_EntaoDeveRetornarSeuId" />
+        <item itemvalue="Gradle.TransferFootballApplicationTest.dadoUmTime_QuandoForCompleto_EntaoSalvar" />
+        <item itemvalue="Gradle.TranferFootball [dependencies]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -91,7 +167,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571701514348</updated>
-      <workItem from="1571701518051" duration="8873000" />
+      <workItem from="1571701518051" duration="18020000" />
     </task>
     <task id="LOCAL-00001" summary="Criada interface TranferFootball.">
       <created>1571704820379</created>
@@ -107,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571706136376</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Base para implementação do TDD concluída.">
+      <created>1571710537712</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1571710537712</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +210,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criada interface TranferFootball." />
     <MESSAGE value="Adicionado exceptions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adicionado exceptions" />
+    <MESSAGE value="Base para implementação do TDD concluída." />
+    <option name="LAST_COMMIT_MESSAGE" value="Base para implementação do TDD concluída." />
   </component>
 </project>
