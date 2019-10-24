@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df7d53b-8383-4800-9428-d792f861e0aa" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,7 +183,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571701514348</updated>
-      <workItem from="1571701518051" duration="25601000" />
+      <workItem from="1571701518051" duration="26705000" />
     </task>
     <task id="LOCAL-00001" summary="Criada interface TranferFootball.">
       <created>1571704820379</created>
@@ -219,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571887989570</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Teste de comprar jogador.ok.">
+      <created>1571888009555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571888009555</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +262,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java</url>
-          <line>49</line>
+          <line>50</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
