@@ -33,14 +33,23 @@ public class TranferFootballApplication implements TranferFootballInterface {
     }
 
     @Override
-    public void comprarJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador) {
-        buscarTimePorId(idTime).ifPresent(time -> {
+    public void novoJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador) {
+        buscarTimePorId(id).ifPresent(time -> {
             throw new IdentificadorUtilizadoException();
         });
-        buscarJogadorPorId(id).ifPresent(jogador -> {
-            throw new IdentificadorUtilizadoException();
-        });
+        jogadores.add(Jogador.builder()
+                .id(id)
+                .idTime(idTime)
+                .nacionalidade(nacionalidade)
+                .posicao(posicao)
+                .camisa(camisa)
+                .habilidade(habilidade)
+                .precoJogador(precoJogador)
+                .build());
+    }
 
+    @Override
+    public void comprarJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador) {
         Time time = buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
         Jogador jogador = buscarJogadorPorId(id).orElseThrow(JogadorNaoEncontradoException::new);
 
@@ -119,7 +128,7 @@ public class TranferFootballApplication implements TranferFootballInterface {
     public List<Long> buscarJogadores(Long idTime) {
         buscarTimePorId(idTime).orElseThrow(TimeNaoEncontradoException::new);
         return jogadores.stream()
-                        .filter(jogador -> jogador.getId().equals(idTime))
+                        .filter(jogador -> jogador.getIdTime().equals(idTime))
                         .map(Jogador::getId)
                         .collect(Collectors.toList());
     }
@@ -189,13 +198,13 @@ public class TranferFootballApplication implements TranferFootballInterface {
                 .findFirst();
     }
 
-    private Optional<Jogador> buscarJogadorPorId(Long id){
+    public Optional<Jogador> buscarJogadorPorId(Long id){
         return jogadores.stream()
                         .filter(jogador -> jogador.getId().equals(id))
                         .findFirst();
     }
 
-    private Optional<Time> buscarTimePorId(Long id){
+    public Optional<Time> buscarTimePorId(Long id){
         return times.stream()
                     .filter(time -> time.getId().equals(id))
                     .findFirst();

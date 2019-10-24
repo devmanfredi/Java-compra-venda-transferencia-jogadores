@@ -9,6 +9,8 @@ public interface TranferFootballInterface {
 
     void novoTime(Long id, String nome, LocalDate dataCriacao, BigDecimal dinheiroCaixa);
 
+    void novoJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador);
+
     void comprarJogador(Long id, Long idTime, String nacionalidade, String posicao, Integer camisa, Integer habilidade, BigDecimal precoJogador);
 
     void venderJogador(Long idJogador);
