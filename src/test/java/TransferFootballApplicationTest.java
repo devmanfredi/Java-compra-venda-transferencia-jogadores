@@ -27,7 +27,6 @@ public class TransferFootballApplicationTest {
 
     @Test
     public void dadoUmTimeEUmJogador_QuandoAdicionarAmbosNasListasEOTimeTiverSaldo_EntaoCompraJogador(){
-        //salvar um time
         Time time = buildTime(10L);
         Jogador jogador = buildJogador(20L);
         tranferFootballApplication.novoTime(time.getId(),time.getNome(),time.getDataCriacao(), time.getDinheiroCaixa());

@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df7d53b-8383-4800-9428-d792f861e0aa" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/TranferFootballApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/interfaces/TranferFootballInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/devmanfredi/interfaces/TranferFootballInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -190,7 +182,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571701514348</updated>
-      <workItem from="1571701518051" duration="25499000" />
+      <workItem from="1571701518051" duration="25601000" />
     </task>
     <task id="LOCAL-00001" summary="Criada interface TranferFootball.">
       <created>1571704820379</created>
@@ -220,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571799959383</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Teste de comprar jogador.ok.">
+      <created>1571887989570</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1571887989570</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +241,8 @@
     <MESSAGE value="Adicionado exceptions" />
     <MESSAGE value="Base para implementação do TDD concluída." />
     <MESSAGE value="Primeiro teste Concluido." />
-    <option name="LAST_COMMIT_MESSAGE" value="Primeiro teste Concluido." />
+    <MESSAGE value="Teste de comprar jogador.ok." />
+    <option name="LAST_COMMIT_MESSAGE" value="Teste de comprar jogador.ok." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -254,7 +254,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/TransferFootballApplicationTest.java</url>
-          <line>50</line>
+          <line>49</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
